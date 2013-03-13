@@ -1,281 +1,0 @@
-TMyReadingXMP
-v5
-r1
-cCheck dependencies
-cCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP normal i386
-cLd /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP normal x86_64
-cCreateUniversalBinary /Users/bruce/MyReadingXMP/debug/MyReadingXMP normal "i386 x86_64"
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-c0000000051188A6300000000000000AA
-t1360562787
-s170
-
-N/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp
-c00000000513F637800000000000018D9
-t1363108728
-s6361
-i<string>
-i"public/include/XMP.incl_cpp"
-i"public/include/XMP.hpp"
-i<iostream>
-i<fstream>
-
-N/Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp
-c00000000513F643C0000000000000245
-t1363108924
-s581
-i<string>
-i"XMP.incl_cpp"
-i"XMP.hpp"
-i<iostream>
-i<fstream>
-
-N/Users/bruce/MyReadingXMP/debug/MyReadingXMP
-t1363183028
-s2526084
-
-N/Users/bruce/MyReadingXMP/release/MyReadingXMP
-t1363108968
-s2526084
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP
-t1363183028
-s1246124
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP.LinkFileList
-c00000000513F64680000000000000084
-t1363108968
-s132
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o
-t1363183027
-s68972
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.o
-t1363108930
-s58092
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP
-t1363183028
-s1272708
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP.LinkFileList
-c00000000513F64680000000000000086
-t1363108968
-s134
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o
-t1363183027
-s68956
-
-N/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.o
-t1363108930
-s58488
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/TXMPFiles.hpp
-c000000004FB225080000000000008BC5
-t1337074952
-s35781
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/TXMPIterator.hpp
-c000000004FB22508000000000000308D
-t1337074952
-s12429
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/TXMPMeta.hpp
-c000000004FB2250800000000000151A3
-t1337074952
-s86435
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/TXMPUtils.hpp
-c000000004FB22508000000000000C2CA
-t1337074952
-s49866
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/XMP.hpp
-c000000004FB225060000000000001057
-t1337074950
-s4183
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/XMP.incl_cpp
-c000000004FB225060000000000000996
-t1337074950
-s2454
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/XMP_Const.h
-c000000004FB22508000000000000C23C
-t1337074952
-s49724
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/XMP_Environment.h
-c000000004FB225060000000000000F47
-t1337074950
-s3911
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/XMP_Version.h
-c000000004FB2250400000000000008DB
-t1337074948
-s2267
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/TXMPFiles.incl_cpp
-c000000004FB2250800000000000034F4
-t1337074952
-s13556
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/TXMPIterator.incl_cpp
-c000000004FB2250800000000000022A9
-t1337074952
-s8873
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/TXMPMeta.incl_cpp
-c000000004FB2250800000000000075E7
-t1337074952
-s30183
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/TXMPUtils.incl_cpp
-c000000004FB225080000000000003E81
-t1337074952
-s16001
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/WXMPFiles.hpp
-c000000004FB225080000000000001F73
-t1337074952
-s8051
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/WXMPIterator.hpp
-c00000000513DD6C80000000000000A79
-t1363007176
-s2681
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/WXMPMeta.hpp
-c000000004FB225080000000000006486
-t1337074952
-s25734
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/WXMPUtils.hpp
-c000000004FB225080000000000003693
-t1337074952
-s13971
-
-N/Users/bruce/XMP-Toolkit-SDK-CS6/public/include/client-glue/WXMP_Common.hpp
-c000000004FB225080000000000001269
-t1337074952
-s4713
-
-CBuild AST from /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp
-r0
-
-CBuild AST from /Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies84f58780c9f0b641^766fad80c9f0b641^---0#1#0#--18"Check dependencies36"EF61C8F2-D0ED-42FE-8039-ACB89D26BFB7-
-
-CCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s384875826.926472
-e384875827.726546
-r1
-xCompileC
-xrelease/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o
-x/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp:40:12: warning: no previous prototype for function 'DumpXMPToFile' [-Wmissing-prototypes]
-oXMP_Status DumpXMPToFile(void * refCon, XMP_StringPtr buffer, XMP_StringLen bufferSize)
-o           ^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cppf569ed32bdf0b641^8bfdb933bdf0b641^-266"/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp:40:12: warning: no previous prototype for function 'DumpXMPToFile' [-Wmissing-prototypes]XMP_Status DumpXMPToFile(void * refCon, XMP_StringPtr buffer, XMP_StringLen bufferSize)           ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@50"No previous prototype for function 'DumpXMPToFile'-384875827#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@69"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp0000000000000000^39#11#39#11#1419#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@69"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp0000000000000000^2499"CompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o MyReadingXMP/ReadingXMP.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/bruce/MyReadingXMP    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -funsigned-char -Wno-trigraphs -fshort-enums -Os -fno-common -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wformat -Wmissing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wunknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wsign-compare -Wno-shorten-64-to-32 -Wnewline-eof -Wno-c++11-extensions -DMAC_ENV=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -ffast-math -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/MyReadingXMP.hmap -I/Users/bruce/MyReadingXMP/debug/include -I/Users/bruce/MyReadingXMP -I/Users/bruce/MyReadingXMP -I/Users/bruce/XMP-Toolkit-SDK-CS6 -I/Users/bruce/XMP-Toolkit-SDK-CS6/public/include -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources/i386 -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources -F/Users/bruce/MyReadingXMP/debug -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -MMD -MT dependencies -MF /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.d --serialize-diagnostics /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.dia -c /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/ReadingXMP.o36"4D32B29A-388F-46BE-9569-526961B59BEA-
-
-CCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.o /Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s384801729.772014
-e384801730.105331
-r1
-xCompileC
-xrelease/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.o
-x/Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/bruce/MyReadingXMP/MyReadingXMP/main.cppc2d9c5c19befb641^e8f61ac29befb641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp0000000000000000^2467"CompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.o MyReadingXMP/main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/bruce/MyReadingXMP    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -funsigned-char -Wno-trigraphs -fshort-enums -Os -fno-common -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wformat -Wmissing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wunknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wsign-compare -Wno-shorten-64-to-32 -Wnewline-eof -Wno-c++11-extensions -DMAC_ENV=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -ffast-math -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/MyReadingXMP.hmap -I/Users/bruce/MyReadingXMP/release/include -I/Users/bruce/MyReadingXMP -I/Users/bruce/MyReadingXMP -I/Users/bruce/XMP-Toolkit-SDK-CS6 -I/Users/bruce/XMP-Toolkit-SDK-CS6/public/include -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources/i386 -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources -F/Users/bruce/MyReadingXMP/release -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -MMD -MT dependencies -MF /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.dia -c /Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/main.o36"391DC423-81CE-4C2E-9455-1423D3E942FA-
-
-CCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s384875826.926334
-e384875827.695857
-r1
-xCompileC
-xrelease/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o
-x/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp:40:12: warning: no previous prototype for function 'DumpXMPToFile' [-Wmissing-prototypes]
-oXMP_Status DumpXMPToFile(void * refCon, XMP_StringPtr buffer, XMP_StringLen bufferSize)
-o           ^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp166aed32bdf0b641^7022b233bdf0b641^-266"/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp:40:12: warning: no previous prototype for function 'DumpXMPToFile' [-Wmissing-prototypes]XMP_Status DumpXMPToFile(void * refCon, XMP_StringPtr buffer, XMP_StringLen bufferSize)           ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@50"No previous prototype for function 'DumpXMPToFile'-384875827#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@69"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp0000000000000000^39#11#39#11#1419#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@69"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp0000000000000000^2513"CompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o MyReadingXMP/ReadingXMP.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/bruce/MyReadingXMP    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -funsigned-char -Wno-trigraphs -fshort-enums -Os -fno-common -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wformat -Wmissing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wunknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wsign-compare -Wno-shorten-64-to-32 -Wnewline-eof -Wno-c++11-extensions -DMAC_ENV=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -ffast-math -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/MyReadingXMP.hmap -I/Users/bruce/MyReadingXMP/debug/include -I/Users/bruce/MyReadingXMP -I/Users/bruce/MyReadingXMP -I/Users/bruce/XMP-Toolkit-SDK-CS6 -I/Users/bruce/XMP-Toolkit-SDK-CS6/public/include -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources/x86_64 -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources -F/Users/bruce/MyReadingXMP/debug -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -MMD -MT dependencies -MF /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.d --serialize-diagnostics /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.dia -c /Users/bruce/MyReadingXMP/MyReadingXMP/ReadingXMP.cpp -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/ReadingXMP.o36"63AA0A4B-438A-4DDB-8817-4D2C95843EE6-
-
-CCompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.o /Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s384801729.772028
-e384801730.099464
-r1
-xCompileC
-xrelease/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.o
-x/Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/bruce/MyReadingXMP/MyReadingXMP/main.cppe4d9c5c19befb641^967719c29befb641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp0000000000000000^2481"CompileC release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.o MyReadingXMP/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/bruce/MyReadingXMP    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -funsigned-char -Wno-trigraphs -fshort-enums -Os -fno-common -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wformat -Wmissing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wunknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wsign-compare -Wno-shorten-64-to-32 -Wnewline-eof -Wno-c++11-extensions -DMAC_ENV=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -ffast-math -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/MyReadingXMP.hmap -I/Users/bruce/MyReadingXMP/release/include -I/Users/bruce/MyReadingXMP -I/Users/bruce/MyReadingXMP -I/Users/bruce/XMP-Toolkit-SDK-CS6 -I/Users/bruce/XMP-Toolkit-SDK-CS6/public/include -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources/x86_64 -I/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/DerivedSources -F/Users/bruce/MyReadingXMP/release -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -MMD -MT dependencies -MF /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.dia -c /Users/bruce/MyReadingXMP/MyReadingXMP/main.cpp -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/main.o36"D857253F-FA28-4D4C-AD42-0C12DEC76098-
-
-CCreateUniversalBinary /Users/bruce/MyReadingXMP/debug/MyReadingXMP normal "i386 x86_64"
-s384875828.743609
-e384875828.967859
-r1
-xCreateUniversalBinary
-x/Users/bruce/MyReadingXMP/debug/MyReadingXMP
-xnormal
-xi386 x86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Create universal binary /Users/bruce/MyReadingXMP/debug/MyReadingXMPa9f6d934bdf0b641^cec5f734bdf0b641^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/bruce/MyReadingXMP/debug/MyReadingXMP000000000080d041^431"CreateUniversalBinary debug/MyReadingXMP normal "i386 x86_64"    cd /Users/bruce/MyReadingXMP    lipo -create /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP -output /Users/bruce/MyReadingXMP/debug/MyReadingXMP36"0856F4FF-CA3A-439F-8119-F482C8A75C5B-
-
-CCreateUniversalBinary /Users/bruce/MyReadingXMP/release/MyReadingXMP normal "i386 x86_64"
-s384801768.172332
-e384801768.207316
-r1
-xCreateUniversalBinary
-x/Users/bruce/MyReadingXMP/release/MyReadingXMP
-xnormal
-xi386 x86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Create universal binary /Users/bruce/MyReadingXMP/release/MyReadingXMP40332ce89befb641^881235e89befb641^---0#0#0#-19%DVTDocumentLocation2@62"file://localhost/Users/bruce/MyReadingXMP/release/MyReadingXMP0000000000000000^435"CreateUniversalBinary release/MyReadingXMP normal "i386 x86_64"    cd /Users/bruce/MyReadingXMP    lipo -create /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP -output /Users/bruce/MyReadingXMP/release/MyReadingXMP36"857848E3-1A57-4A50-A9C6-024BC534BA19-
-
-CLd /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP normal i386
-s384875827.733402
-e384875828.736433
-r1
-xLd
-x/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP
-xnormal
-xi386
-old: warning: directory not found for option '-L/Users/bruce/MyReadingXMP/debug'
-old: warning: directory not found for option '-F/Users/bruce/MyReadingXMP/debug'
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Link /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMPc8d2bb33bdf0b641^f489bc34bdf0b641^-160"ld: warning: directory not found for option '-L/Users/bruce/MyReadingXMP/debug'ld: warning: directory not found for option '-F/Users/bruce/MyReadingXMP/debug'2(21%IDEActivityLogMessage2@66"Directory not found for option '-L/Users/bruce/MyReadingXMP/debug'-384875827#0#80#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@66"Directory not found for option '-F/Users/bruce/MyReadingXMP/debug'-384875827#80#80#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--1124"Ld release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP normal i386    cd /Users/bruce/MyReadingXMP    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/bruce/MyReadingXMP/debug -F/Users/bruce/MyReadingXMP/debug -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -filelist /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP.LinkFileList -mmacosx-version-min=10.8 /Users/bruce/XMP-Toolkit-SDK-CS6/public/libraries/macintosh/release/libXMPCoreStatic.a /Users/bruce/XMP-Toolkit-SDK-CS6/public/libraries/macintosh/release/libXMPFilesStatic.a -framework CoreServices -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/i386/MyReadingXMP36"FB6BD114-586C-43FC-B58A-6501C9C95945-
-
-CLd /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP normal x86_64
-s384875827.702728
-e384875828.720957
-r1
-xLd
-x/Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP
-xnormal
-xx86_64
-old: warning: directory not found for option '-L/Users/bruce/MyReadingXMP/debug'
-old: warning: directory not found for option '-F/Users/bruce/MyReadingXMP/debug'
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Link /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP76fcb333bdf0b641^c9c9b834bdf0b641^-160"ld: warning: directory not found for option '-L/Users/bruce/MyReadingXMP/debug'ld: warning: directory not found for option '-F/Users/bruce/MyReadingXMP/debug'2(21%IDEActivityLogMessage2@66"Directory not found for option '-L/Users/bruce/MyReadingXMP/debug'-384875827#0#80#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@66"Directory not found for option '-F/Users/bruce/MyReadingXMP/debug'-384875827#80#80#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--1134"Ld release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP normal x86_64    cd /Users/bruce/MyReadingXMP    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/bruce/MyReadingXMP/debug -F/Users/bruce/MyReadingXMP/debug -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks -filelist /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP.LinkFileList -mmacosx-version-min=10.8 /Users/bruce/XMP-Toolkit-SDK-CS6/public/libraries/macintosh/release/libXMPCoreStatic.a /Users/bruce/XMP-Toolkit-SDK-CS6/public/libraries/macintosh/release/libXMPFilesStatic.a -framework CoreServices -o /Users/bruce/MyReadingXMP/release/intermediate/release/MyReadingXMP.build/Debug/MyReadingXMP.build/Objects-normal/x86_64/MyReadingXMP36"F526CEC8-A39E-4066-81DD-374D4409AA81-
-
