@@ -12,22 +12,13 @@
  * and examining it through the XMP object.
  */
 
-#include <string>
-
-// Must be defined to instantiate template classes
-#define TXMP_STRING_TYPE std::string
-
-// Must be defined to give access to XMPFiles
-#define XMP_INCLUDE_XMPFILES 1
-
-// Ensure XMP templates are instantiated
-#include "public/include/XMP.incl_cpp"
-
-// Provide access to the API
-#include "public/include/XMP.hpp"
+#include "Global.h"
 
 #include <iostream>
 #include <fstream>
+
+#include "ModifyingXMP.h"
+
 
 using namespace std;
 
@@ -63,13 +54,13 @@ XMP_Status DumpXMPToFile(void * refCon, XMP_StringPtr buffer, XMP_StringLen buff
  */
 int main ( int argc, const char * argv[] )
 {
-	if ( argc != 2 ) // 2 := command and 1 parameter
-	{
-		cout << "usage: ReadingXMP (filename)" << endl;
-		return 0;
-	}
+//	if ( argc != 2 ) // 2 := command and 1 parameter
+//	{
+//		cout << "usage: ReadingXMP (filename)" << endl;
+//		return 0;
+//	}
 	
-	string filename = string( argv[1] );
+	string filename = "/Users/bruce/Desktop/image1.jpg" /*string( argv[1] )*/;
     
 	if(!SXMPMeta::Initialize())
 	{
@@ -77,9 +68,9 @@ int main ( int argc, const char * argv[] )
 		return -1;
 	}
 	XMP_OptionBits options = 0;
-#if UNIX_ENV
+    #if UNIX_ENV
     options |= kXMPFiles_ServerMode;
-#endif
+    #endif
 	// Must initialize SXMPFiles before we use it
 	if ( ! SXMPFiles::Initialize ( options ) )
 	{
@@ -112,78 +103,24 @@ int main ( int argc, const char * argv[] )
 		// If the file is open then read the metadata
 		if(ok)
 		{
-			cout << status << endl;
+			
+            //******** READ HERE
+            cout << status << endl;
 			cout << filename << " is opened successfully" << endl;
 			// Create the xmp object and get the xmp data
 			SXMPMeta meta;
 			myFile.GetXMP(&meta);
+
+            displayPropertyValues(&meta);
             
-			bool exists;
+            SXMPMeta meta1;
+            meta1 = createXMPFromRDF();
             
-			// Read a simple property
-			string simpleValue;  //Stores the value for the property
-			exists = meta.GetProperty(kXMP_NS_XMP, "CreatorTool", &simpleValue, NULL);
-			if(exists)
-				cout << "CreatorTool = " << simpleValue << endl;
-			else
-				simpleValue.clear();
-            
-			// Get the first element in the dc:creator array
-			string elementValue;
-			exists = meta.GetArrayItem(kXMP_NS_DC, "creator", 1, &elementValue, NULL);
-			if(exists)
-				cout << "dc:creator = " << elementValue << endl;
-			else
-				elementValue.clear();
-            
-			// Get the the entire dc:subject array
-			string propValue;
-			int arrSize = meta.CountArrayItems(kXMP_NS_DC, "subject");
-			for(int i = 1; i <= arrSize;i++)
-			{
-				meta.GetArrayItem(kXMP_NS_DC, "subject", i, &propValue, 0);
-				cout << "dc:subject[" << i << "] = " << propValue << endl;
-			}
-            
-			// Get the dc:title for English and French
-			string itemValue;
-			string actualLang;
-			meta.GetLocalizedText(kXMP_NS_DC, "title", "en", "en-US", NULL, &itemValue, NULL);
-			cout << "dc:title in English = " << itemValue << endl;
-            
-			meta.GetLocalizedText(kXMP_NS_DC, "title", "fr", "fr-FR", NULL, &itemValue, NULL);
-			cout << "dc:title in French = " << itemValue << endl;
-            
-			// Get dc:MetadataDate
-			XMP_DateTime myDate;
-			if(meta.GetProperty_Date(kXMP_NS_XMP, "MetadataDate", &myDate, NULL))
-			{
-				// Convert the date struct into a convenient string and display it
-				string myDateStr;
-				SXMPUtils::ConvertFromDate(myDate, &myDateStr);
-				cout << "meta:MetadataDate = " << myDateStr << endl;
-			}
-            
-			// See if the flash struct exists and see if it was used
-			string path, value;
-			exists = meta.DoesStructFieldExist(kXMP_NS_EXIF, "Flash", kXMP_NS_EXIF,"Fired");
-			if(exists)
-			{
-				bool flashFired;
-				SXMPUtils::ComposeStructFieldPath(kXMP_NS_EXIF, "Flash", kXMP_NS_EXIF, "Fired", &path);
-				meta.GetProperty_Bool(kXMP_NS_EXIF, path.c_str(), &flashFired, NULL);
-				string flash = (flashFired) ? "True" : "False";
-                
-				cout << "Flash Used = " << flash << endl;
-			}
-            
-			// Dump the current xmp object to a file
-			ofstream dumpFile;
-			dumpFile.open("XMPDump.txt", ios::out);
-			meta.DumpObject(DumpXMPToFile, &dumpFile);
-			dumpFile.close();
-			cout << endl << "XMP dumped to XMPDump.txt" << endl;
-            
+            SXMPUtils::ApplyTemplate(&meta, meta1, kXMPTemplate_AddNewProperties | kXMPTemplate_ReplaceExistingProperties | kXMPTemplate_IncludeInternalProperties);
+
+            cout << "After Appending Properties:" << endl;
+            displayPropertyValues(&meta);
+			
 			// Close the SXMPFile.  The resource file is already closed if it was
 			// opened as read only but this call must still be made.
 			myFile.CloseFile();
