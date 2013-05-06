@@ -82,6 +82,12 @@ int main ( int argc, const char * argv[] )
 	{
 		// Options to open the file with - read only and use a file handler
 		XMP_OptionBits opts = kXMPFiles_OpenForRead | kXMPFiles_OpenUseSmartHandler;
+       
+        // **** register CC URI
+        string ccRegistered;
+        SXMPMeta::RegisterNamespace(kXMP_NS_CC, "cc", &ccRegistered);
+        cout << "registeted cc ns: = " << ccRegistered  << endl;
+
         
 		bool ok;
 		SXMPFiles myFile;
@@ -113,11 +119,16 @@ int main ( int argc, const char * argv[] )
 
             displayPropertyValues(&meta);
             
+            
+            //******** WRITE HERE
             SXMPMeta meta1;
             meta1 = createXMPFromRDF();
             
             SXMPUtils::ApplyTemplate(&meta, meta1, kXMPTemplate_AddNewProperties | kXMPTemplate_ReplaceExistingProperties | kXMPTemplate_IncludeInternalProperties);
 
+            cout << "Things to append:" << endl;
+            displayPropertyValues(&meta1);
+            
             cout << "After Appending Properties:" << endl;
             displayPropertyValues(&meta);
 			

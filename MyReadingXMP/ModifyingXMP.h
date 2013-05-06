@@ -16,5 +16,5 @@ using namespace std;
 
 void displayPropertyValues(SXMPMeta*);
 SXMPMeta createXMPFromRDF();
-bool readXMPFile(char*);
+string readXMPFile();
 

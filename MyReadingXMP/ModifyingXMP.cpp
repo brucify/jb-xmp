@@ -66,50 +66,44 @@ void displayPropertyValues(SXMPMeta * meta)
 		cout << "meta:MetadataDate = " << myDateStr << endl;
 	}
     
+    string attriNameValue;  //Stores the value for the property
+	meta->GetProperty(kXMP_NS_CC, "attribution", &attriNameValue, 0);
+	cout << "cc:attributionName = " << attriNameValue << endl;
+    
+    
 	cout << "----------------------------------------" << endl;
 }
 
 
-bool readXMPFile(char* target)
+string readXMPFile()
 {
-//    string output;
-//    string line;
-//    ifstream myfile ("/Users/bruce/Desktop/test.xmp");
-//    if (myfile.is_open())
-//    {
-//        while ( myfile.good() )
-//        {
-//            getline (myfile,line);
-//            output += line;
-//        }
-//        
-//        target = output.c_str();
-//        return true;
-//        myfile.close();
-//    }
-//    
-//    else return false;
-    ifstream is;
-    is.open("/Users/bruce/Desktop/test.xmp");
-
-    if (is.is_open()){
-        is.seekg (0, is.end);
-        int length = is.tellg();
-        is.seekg (0, is.beg);
-        
-        target = new char [length];
+    string output;
+    string line;
     
-        int i = 0;
+    ifstream myfile ("/Users/bruce/Desktop/test.xmp");
     
-        while (!is.eof()){
-            is.read(target + i, 1);
-            i++;
+    if (myfile.is_open())
+    {
+        while ( myfile.good() )
+        {
+            getline (myfile,line);
+            output += line;
         }
+  
+        myfile.close();
+
+        cout << "output length = " << output.length() << endl;
         
-        return true;
+        return output;
     }
+    
     else
-        return false;
+    {
+        cout << "faaalse" << endl;
+
+        return 0;
+    }
+    
 }
 
 
@@ -135,22 +129,32 @@ SXMPMeta createXMPFromRDF()
 //    "</rdf:Description>"
 //    "</rdf:RDF>";
     
-    char* rdf;
-    readXMPFile(rdf);
+    string rdf;
     
+    rdf = readXMPFile();
     
+    cout << "rdf length = " << rdf.length() << endl;
+
 	SXMPMeta meta;
 	// Loop over the rdf string and create the XMP object
 	// 10 characters at a time
+    
+    cout << "reading lines";
+    
+    const char* c_rdf = rdf.c_str();
+    
 	int i;
-	for (i = 0; i < (long)strlen(rdf) - 10; i += 10 )
+	for (i = 0; i < (long)strlen(c_rdf) - 10; i += 10 )
 	{
-		meta.ParseFromBuffer ( &rdf[i], 10, kXMP_ParseMoreBuffers );
+		meta.ParseFromBuffer (&c_rdf[i], 10, kXMP_ParseMoreBuffers );
+        cout << ".";
 	}
-	
+    cout << endl;
+
 	// The last call has no kXMP_ParseMoreBuffers options, signifying
 	// this is the last input buffer
-	meta.ParseFromBuffer ( &rdf[i], (XMP_StringLen) strlen(rdf) - i );
+	meta.ParseFromBuffer ( &c_rdf[i], (XMP_StringLen) strlen(c_rdf) - i );
+
 	return meta;
     
 }
