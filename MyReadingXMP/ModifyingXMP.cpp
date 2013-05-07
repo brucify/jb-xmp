@@ -66,16 +66,19 @@ void displayPropertyValues(SXMPMeta * meta)
 		cout << "meta:MetadataDate = " << myDateStr << endl;
 	}
     
+    // Get cc:attributionName
     string attriNameValue;  //Stores the value for the property
 	meta->GetProperty(kXMP_NS_CC, "attribution", &attriNameValue, 0);
-	cout << "cc:attributionName = " << attriNameValue << endl;
+    
+    if (attriNameValue != "")
+        cout << "cc:attributionName = " << attriNameValue << endl;
     
     
 	cout << "----------------------------------------" << endl;
 }
 
 
-string readXMPFile()
+bool readXMPFile( string * target )
 {
     string output;
     string line;
@@ -90,18 +93,20 @@ string readXMPFile()
             output += line;
         }
   
+        *target = output;
+        
         myfile.close();
 
         cout << "output length = " << output.length() << endl;
         
-        return output;
+        return true;
     }
     
     else
     {
         cout << "faaalse" << endl;
 
-        return 0;
+        return false;
     }
     
 }
@@ -131,7 +136,7 @@ SXMPMeta createXMPFromRDF()
     
     string rdf;
     
-    rdf = readXMPFile();
+    readXMPFile(&rdf);
     
     cout << "rdf length = " << rdf.length() << endl;
 
@@ -155,6 +160,18 @@ SXMPMeta createXMPFromRDF()
 	// this is the last input buffer
 	meta.ParseFromBuffer ( &c_rdf[i], (XMP_StringLen) strlen(c_rdf) - i );
 
+//    cout << "writing to file.." << endl;
+//    string xmpBuffer;
+//    meta.SerializeToBuffer( &xmpBuffer, NULL, NULL, "", "", NULL );
+//    writeRDFToFile(&xmpBuffer, "XMP_RDF.xmp");
+    
 	return meta;
     
+}
+
+void writeRDFToFile( string * rdf, string filename )
+{
+    ofstream outFile;
+    outFile.open( filename.c_str(), ios::out ); outFile << *rdf;
+    outFile.close();
 }

@@ -123,14 +123,22 @@ int main ( int argc, const char * argv[] )
             //******** WRITE HERE
             SXMPMeta meta1;
             meta1 = createXMPFromRDF();
-            
-            SXMPUtils::ApplyTemplate(&meta, meta1, kXMPTemplate_AddNewProperties | kXMPTemplate_ReplaceExistingProperties | kXMPTemplate_IncludeInternalProperties);
 
             cout << "Things to append:" << endl;
             displayPropertyValues(&meta1);
             
+            
+            SXMPUtils::ApplyTemplate(&meta, meta1, kXMPTemplate_AddNewProperties | kXMPTemplate_ReplaceExistingProperties | kXMPTemplate_IncludeInternalProperties);
+
+            
             cout << "After Appending Properties:" << endl;
             displayPropertyValues(&meta);
+            
+            cout << "writing to file.." << endl;
+            string xmpBuffer;
+            meta.SerializeToBuffer( &xmpBuffer, NULL, NULL, "", "", NULL );
+            writeRDFToFile(&xmpBuffer, "XMP_RDF.xmp");
+
 			
 			// Close the SXMPFile.  The resource file is already closed if it was
 			// opened as read only but this call must still be made.
