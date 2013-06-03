@@ -23,7 +23,8 @@
 // Provide access to the API
 #include "public/include/XMP.hpp"
 
-#define kXMP_NS_CC        "http://creativecommons.org/ns#"
+// custom cc URI namespace
+#define kXMP_NS_CC "http://creativecommons.org/ns#"
 
 
 #endif

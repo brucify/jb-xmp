@@ -23,10 +23,14 @@ using namespace std;
  */
 void displayPropertyValues(SXMPMeta * meta)
 {
+    
+    // OBS Begin of Adobe authored 
+    
 	// Read a simple property
 	string simpleValue;  //Stores the value for the property
 	meta->GetProperty(kXMP_NS_XMP, "CreatorTool", &simpleValue, 0);
-	cout << "meta:CreatorTool = " << simpleValue << endl;
+    if(simpleValue != "")
+        cout << "meta:CreatorTool = " << simpleValue << endl;
     
 	// Get the first and second element in the dc:creator array
 	string elementValue;
@@ -65,25 +69,31 @@ void displayPropertyValues(SXMPMeta * meta)
 		SXMPUtils::ConvertFromDate(myDate, &myDateStr);
 		cout << "meta:MetadataDate = " << myDateStr << endl;
 	}
+    // OBS end of Adobe authored
     
+    // OBS START of custom cc property
     // Get cc:attributionName
-    string attriNameValue;  //Stores the value for the property
-	meta->GetProperty(kXMP_NS_CC, "attribution", &attriNameValue, 0);
+    string attriNameValue;
+    
+    // OBS kXMP_NS_CC must be defined
+	meta->GetProperty(kXMP_NS_CC, "attributionName", &attriNameValue, 0);
     
     if (attriNameValue != "")
         cout << "cc:attributionName = " << attriNameValue << endl;
-    
+    // OBS END of custom cc property
     
 	cout << "----------------------------------------" << endl;
 }
 
 
+// read .xmp file
 bool readXMPFile( string * target )
 {
     string output;
     string line;
     
-    ifstream myfile ("/Users/bruce/Desktop/test.xmp");
+    // OBS hard-coded .xmp path
+    ifstream myfile ("/Users/bruce/Desktop/test_sweden.xmp");
     
     if (myfile.is_open())
     {
@@ -105,7 +115,6 @@ bool readXMPFile( string * target )
     else
     {
         cout << "faaalse" << endl;
-
         return false;
     }
     
@@ -120,19 +129,6 @@ bool readXMPFile( string * target )
  */
 SXMPMeta createXMPFromRDF()
 {
-//	string rdf =
-//    "<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>"
-//    "<rdf:Description rdf:about='' xmlns:dc='http://purl.org/dc/elements/1.1/'>"
-//    "<dc:subject>"
-//    "<rdf:Bag>"
-//    "<rdf:li>asdasdasdsad</rdf:li>"
-//    "<rdf:li>ShahahahhhahaaahDK</rdf:li>"
-//    "<rdf:li>Samaaaaaaaaple</rdf:li>"
-//    "</rdf:Bag>"
-//    "</dc:subject>"
-//    "<dc:format>image/tiff</dc:format>"
-//    "</rdf:Description>"
-//    "</rdf:RDF>";
     
     string rdf;
     
@@ -141,13 +137,15 @@ SXMPMeta createXMPFromRDF()
     cout << "rdf length = " << rdf.length() << endl;
 
 	SXMPMeta meta;
-	// Loop over the rdf string and create the XMP object
-	// 10 characters at a time
-    
+	
     cout << "reading lines";
-    
+
+    // OBS must be char*
     const char* c_rdf = rdf.c_str();
     
+    // Loop over the rdf string and create the XMP object
+	// 10 characters at a time
+    // note: SEE user manuel
 	int i;
 	for (i = 0; i < (long)strlen(c_rdf) - 10; i += 10 )
 	{
@@ -159,11 +157,6 @@ SXMPMeta createXMPFromRDF()
 	// The last call has no kXMP_ParseMoreBuffers options, signifying
 	// this is the last input buffer
 	meta.ParseFromBuffer ( &c_rdf[i], (XMP_StringLen) strlen(c_rdf) - i );
-
-//    cout << "writing to file.." << endl;
-//    string xmpBuffer;
-//    meta.SerializeToBuffer( &xmpBuffer, NULL, NULL, "", "", NULL );
-//    writeRDFToFile(&xmpBuffer, "XMP_RDF.xmp");
     
 	return meta;
     
